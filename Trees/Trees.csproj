@@ -49,8 +49,17 @@
     <Compile Include="AddNodeCommand.cs" />
     <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="CompositeRecorder.cs" />
+    <Compile Include="DeleteNodeCommand.cs" />
+    <Compile Include="FileRecorder.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\IRecorder.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="MacroCommand.cs" />
+    <Compile Include="NumberRecorderDecorator.cs" />
     <Compile Include="Observer\ISubject.cs" />
     <Compile Include="Observer\Subject.cs" />
+    <Compile Include="TextBoxRecorder.cs" />
     <Compile Include="TreesForm.cs">
       <SubType>Form</SubType>
     </Compile>

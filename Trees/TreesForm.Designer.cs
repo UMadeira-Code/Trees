@@ -32,13 +32,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.mTreeView = new System.Windows.Forms.TreeView();
-            this.mMessageBox = new System.Windows.Forms.TextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.mUndoButton = new System.Windows.Forms.ToolStripButton();
             this.mRedoButton = new System.Windows.Forms.ToolStripButton();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.mTreeView = new System.Windows.Forms.TreeView();
+            this.mMessageBox = new System.Windows.Forms.TextBox();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mUndoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mRedoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -50,7 +55,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(531, 24);
@@ -75,42 +81,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(531, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.mTreeView);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.mMessageBox);
-            this.splitContainer1.Size = new System.Drawing.Size(531, 307);
-            this.splitContainer1.SplitterDistance = 177;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // mTreeView
-            // 
-            this.mTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mTreeView.Location = new System.Drawing.Point(0, 0);
-            this.mTreeView.Name = "mTreeView";
-            this.mTreeView.Size = new System.Drawing.Size(531, 177);
-            this.mTreeView.TabIndex = 0;
-            // 
-            // mMessageBox
-            // 
-            this.mMessageBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mMessageBox.Location = new System.Drawing.Point(0, 0);
-            this.mMessageBox.Multiline = true;
-            this.mMessageBox.Name = "mMessageBox";
-            this.mMessageBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.mMessageBox.Size = new System.Drawing.Size(531, 126);
-            this.mMessageBox.TabIndex = 0;
             // 
             // toolStripButton1
             // 
@@ -154,6 +124,81 @@
             this.mRedoButton.Text = "toolStripButton4";
             this.mRedoButton.Click += new System.EventHandler(this.OnRedo);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.mTreeView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.mMessageBox);
+            this.splitContainer1.Size = new System.Drawing.Size(531, 307);
+            this.splitContainer1.SplitterDistance = 177;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // mTreeView
+            // 
+            this.mTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mTreeView.Location = new System.Drawing.Point(0, 0);
+            this.mTreeView.Name = "mTreeView";
+            this.mTreeView.Size = new System.Drawing.Size(531, 177);
+            this.mTreeView.TabIndex = 0;
+            // 
+            // mMessageBox
+            // 
+            this.mMessageBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mMessageBox.Location = new System.Drawing.Point(0, 0);
+            this.mMessageBox.Multiline = true;
+            this.mMessageBox.Name = "mMessageBox";
+            this.mMessageBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.mMessageBox.Size = new System.Drawing.Size(531, 126);
+            this.mMessageBox.TabIndex = 0;
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mUndoMenuItem,
+            this.mRedoMenuItem,
+            this.toolStripMenuItem1,
+            this.deleteAllToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // deleteAllToolStripMenuItem
+            // 
+            this.deleteAllToolStripMenuItem.Name = "deleteAllToolStripMenuItem";
+            this.deleteAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteAllToolStripMenuItem.Text = "Delete All...";
+            this.deleteAllToolStripMenuItem.Click += new System.EventHandler(this.OnDeleteAll);
+            // 
+            // mUndoMenuItem
+            // 
+            this.mUndoMenuItem.Enabled = false;
+            this.mUndoMenuItem.Name = "mUndoMenuItem";
+            this.mUndoMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mUndoMenuItem.Text = "Undo";
+            this.mUndoMenuItem.Click += new System.EventHandler(this.OnUndo);
+            // 
+            // mRedoMenuItem
+            // 
+            this.mRedoMenuItem.Enabled = false;
+            this.mRedoMenuItem.Name = "mRedoMenuItem";
+            this.mRedoMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mRedoMenuItem.Text = "Redo";
+            this.mRedoMenuItem.Click += new System.EventHandler(this.OnRedo);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
             // TreesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +236,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton mUndoButton;
         private System.Windows.Forms.ToolStripButton mRedoButton;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mUndoMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mRedoMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
 
